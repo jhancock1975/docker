@@ -1,0 +1,7 @@
+moviepy
+opencv-python
+pip-chill
+pycurl
+pygobject
+python-apt
+scipy

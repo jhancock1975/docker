@@ -1,0 +1,8 @@
+FROM tensorflow/tensorflow:1.13.1-gpu-py3
+RUN apt-get update
+RUN apt-get upgrade
+RUN apt install git
+RUN pip install moviepy opencv-python pip-chill pycurl pygobject python-apt scipy
+RUN mkdir /git
+RUN git clone https://github.com/carpedm20/DCGAN-tensorflow.git /git/
+RUN cmd ["python", "main.py --dataset mnist --input_height=28 --output_height=28 --train"]

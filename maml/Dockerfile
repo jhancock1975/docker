@@ -1,3 +1,6 @@
+# run with:
+# docker run --runtime=nvidia -it -w /tensorflow/maml -v /home/ubuntu/docker/maml:/mnt -e HOST_PERMS=1000:1000 maml
+
 FROM tensorflow/tensorflow:1.13.1-gpu-py3
 RUN apt-get -y update
 RUN apt install -y git
